@@ -40,7 +40,7 @@ function TrafficLight() {
         <div className="space-y-1 text-gray-500 list-disc list-inside">
           Build a traffic light where the lights switch from green to yellow to red after 
           predetermined intervals and loop indefinitely. Each light should be lit for the following durations:
-          <ul className="space-y-1 text-gray-500 list-disc list-inside mt-5">
+          <ul className="space-y-1 text-gray-500 list-disc list-inside mt-5  ml-5">
             <li>
               Red light: 4000ms
             </li>

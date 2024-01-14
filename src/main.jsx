@@ -5,10 +5,12 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 
 // styes
-import './tabs.css';
-import './traffic-light.css';
-import './job-board.css';
-import './index.css';
+import './styles/tabs.css';
+import './styles/traffic-light.css';
+import './styles/job-board.css';
+import './styles/accordion.css';
+import './styles/question-board.css';
+import './styles/index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>

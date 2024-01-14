@@ -8,9 +8,20 @@ function ContactForm() {
         <div className="space-y-1 text-gray-500 list-disc list-inside">
           Build a form user interface and show the data in a table.
         </div>
+        <ul className="space-y-1 text-gray-500 list-disc list-inside mt-5 ml-5">
+          <li>
+            Show error message when user input invalid data.
+          </li>
+          <li>
+            Check password and confirm password are matched.
+          </li>
+          <li>
+            Complete the form and show the data in a table.
+          </li>
+        </ul>
         <br />
-        <h2 className="mb-2 text-lg font-semibold text-gray-900">Technical</h2>
-        <ul className="space-y-1 text-gray-500 list-disc list-inside">
+        <h2 className="text-lg font-semibold text-gray-900">Technical</h2>
+        <ul className="space-y-1 text-gray-500 list-disc list-inside ml-5 mt-5">
           <li>
             react hook form
           </li>

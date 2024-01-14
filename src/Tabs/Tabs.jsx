@@ -33,7 +33,7 @@ export default function Tabs({ defaultValue }) {
         <div className="space-y-1 text-gray-500 list-disc list-inside">
           Build a tabs component that displays one panel of content at a time depending 
           on the active tab element. Some HTML is provided for you as example contents.
-          <ul className="space-y-1 text-gray-500 list-disc list-inside mt-5">
+          <ul className="space-y-1 text-gray-500 list-disc list-inside mt-5 ml-5">
             <li>
               Build a tabs component that displays one panel of content at a time depending on the active 
               tab element. Some HTML is provided for you as example contents.

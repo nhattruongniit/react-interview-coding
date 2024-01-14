@@ -4,12 +4,14 @@ import ContactForm from './ContactForm/ContactForm';
 import Tabs from './Tabs/Tabs';
 import TrafficLight from './TrafficLight/TrafficLight';
 import JobBoard from './JobBoard/JobBoard';
+import Accordion from './Accordion/Accordion';
+import QuestionBoard from './QuestionBoard/QuestionBoard';
 
 function App() {
 
   return (
     <div className='container'>
-      <h1 className="text-center text-3xl font-bold mb-10">React Interview Coding</h1>
+      <h1 className="text-center text-3xl font-bold mb-10 mt-5">React Interview Coding</h1>
 
       <div className="text-sm font-medium text-center text-gray-500 border-gray-200 dark:text-gray-400 dark:border-gray-700">
         <ul className="flex flex-wrap -mb-px">
@@ -36,6 +38,16 @@ function App() {
               Job Board
             </Link>
           </li>
+          <li className="me-2">
+            <Link to="/question-board" className="inline-block p-4 border-transparent text-black">
+              Question Board
+            </Link>
+          </li>
+          <li className="me-2">
+            <Link to="/accordion" className="inline-block p-4 border-transparent text-black">
+              Accordion
+            </Link>
+          </li>
         </ul>
       </div>
 
@@ -46,6 +58,8 @@ function App() {
           <Route path="/tabs" element={<Tabs />} />
           <Route path="/traffic-light" element={<TrafficLight />} />
           <Route path="/job-board" element={<JobBoard />} />
+          <Route path="/question-board" element={<QuestionBoard />} />
+          <Route path="/accordion" element={<Accordion />} />
         </Routes>
       </div>
     </div>

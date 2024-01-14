@@ -42,8 +42,6 @@ function JobBoard() {
     setIsFetching(false);
   }
 
-  console.log('jobs: ', jobs)
-
   return (
     <>
       <div>
@@ -51,7 +49,7 @@ function JobBoard() {
         <div className="space-y-1 text-gray-500 list-disc list-inside">
           Build a job board that displays the latest job postings fetched from the 
           Hacker News API, with each posting displaying the job title, poster, and date posted.
-          <ul className="space-y-1 text-gray-500 list-disc list-inside mt-5">
+          <ul className="space-y-1 text-gray-500 list-disc list-inside mt-5  ml-5">
             <li>
               The page should show 6 jobs on initial load with a button to load more postings.
             </li>
