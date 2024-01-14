@@ -1,6 +1,49 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 
+const PAGE_SIZE = 6;
 function JobBoard() {
+  const [isFetching, setIsFetching] = React.useState(false);
+  const [jobIds, setJobIds] = React.useState(null);
+  const [jobs, setJobs] =  React.useState([]);
+  const [page, setPage] = React.useState(0);
+
+  useEffect(() => {
+    fetchJobs(page);
+  }, [page]);
+
+  async function fetchJobIds(currPage) {
+    let jobs = jobIds;
+    if (!jobs) {
+      const res = await fetch(
+        'https://hacker-news.firebaseio.com/v0/jobstories.json',
+      );
+      jobs = await res.json();
+      setJobIds(jobs);
+    }
+
+    const start = currPage * PAGE_SIZE;
+    const end = start + PAGE_SIZE;
+    return jobs.slice(start, end);
+  }
+
+  async function fetchJobs(currPage) {
+    const jobIdsForPage = await fetchJobIds(currPage);
+
+    setIsFetching(true);
+    const jobsForPage = await Promise.all(
+      jobIdsForPage.map((jobId) =>
+        fetch(
+          `https://hacker-news.firebaseio.com/v0/item/${jobId}.json`,
+        ).then((res) => res.json()),
+      ),
+    );
+    setJobs([...jobs, ...jobsForPage]);
+
+    setIsFetching(false);
+  }
+
+  console.log('jobs: ', jobs)
+
   return (
     <>
       <div>
@@ -23,18 +66,40 @@ function JobBoard() {
 
       <div>
         <h1 className="title">Jobs Board</h1>
-        <div className="jobs">
-          <div className="post">
-            <h2 className="post__title">
-              Unlogged (YC S22) is hiring to automate regression testing
-            </h2>
-            <p className="post__metadata">
-              By shardullavekar · 12/17/2023, 8:00:37 AM
-            </p>
+        {jobIds === null ? (
+          <p className="loading">Loading ...</p>
+        ) : (
+          <div className="jobs">
+            {jobs.map(job => (
+              <div key={job.id} className="post">
+                <h2 className="post__title">
+                  {job.title}
+                </h2>
+                <p className="post__metadata">
+                  By {job.by} &middot;{' '}
+                  {new Date(job.time * 1000).toLocaleString()}
+                </p>
+              </div>
+            ))}
           </div>
-        </div>
+        )}
+        
+        {jobs.length > 0 && page * PAGE_SIZE + PAGE_SIZE < jobIds.length && (
+          <button 
+            className="load-more-button"
+            disabled={isFetching}
+            onClick={() => setPage(page + 1)}
+          >
+            {isFetching ? 'Loading ...' : 'Load more jobs'}
+          </button>
 
-        <button className="load-more-button">Load more jobs</button>
+        )}
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     </>
   )
