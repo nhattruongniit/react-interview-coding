@@ -1,8 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+
 import App from './App.jsx'
-import './index.css'
+
+// styes
+import './tabs.css';
+import './traffic-light.css';
+import './job-board.css';
+import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <App />
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 )
