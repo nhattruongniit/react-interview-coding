@@ -10,6 +10,7 @@ import './styles/traffic-light.css';
 import './styles/job-board.css';
 import './styles/accordion.css';
 import './styles/question-board.css';
+import './styles/color-box.css';
 import './styles/index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(

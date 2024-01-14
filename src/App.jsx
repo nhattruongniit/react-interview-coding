@@ -6,6 +6,7 @@ import TrafficLight from './TrafficLight/TrafficLight';
 import JobBoard from './JobBoard/JobBoard';
 import Accordion from './Accordion/Accordion';
 import QuestionBoard from './QuestionBoard/QuestionBoard';
+import ColorBox from './ColorBox/ColorBox';
 
 function App() {
 
@@ -48,6 +49,11 @@ function App() {
               Accordion
             </Link>
           </li>
+          <li className="me-2">
+            <Link to="/color-box" className="inline-block p-4 border-transparent text-black">
+              Color Box
+            </Link>
+          </li>
         </ul>
       </div>
 
@@ -60,6 +66,7 @@ function App() {
           <Route path="/job-board" element={<JobBoard />} />
           <Route path="/question-board" element={<QuestionBoard />} />
           <Route path="/accordion" element={<Accordion />} />
+          <Route path="/color-box" element={<ColorBox />} />
         </Routes>
       </div>
     </div>
