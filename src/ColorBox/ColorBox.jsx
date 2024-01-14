@@ -59,7 +59,7 @@ function ColorBox() {
             className={box.className}
             onClick={() => handleChangeColor(box.originalColor)}
           >
-            {box.text}
+            {box.originalColor}
           </div>
         ))}
       </div>
