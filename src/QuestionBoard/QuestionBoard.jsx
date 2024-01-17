@@ -31,6 +31,9 @@ function QuestionBoard() {
               Show submissions question status: correct, incorrect, partially correct. Get data from dataSubmissions.js
                 <ul className="text-gray-500 list- list-inside ml-10">
                   <li>
+                    None answer: <span class="text-gray-500">gray</span>
+                  </li>
+                  <li>
                     Correct answer: <span className="text-green-500">green</span>
                   </li>
                   <li>
@@ -74,7 +77,7 @@ function QuestionBoard() {
           <h2>JAVASCRIPT - 0 / 4</h2>
           <div className="boards">
             <div className="question">
-              <div className="question__status question__status--partially_correct" />
+              <div className="question__status question__status--none" />
               <h2 className="question__title">ES6</h2>
             </div>
           </div>

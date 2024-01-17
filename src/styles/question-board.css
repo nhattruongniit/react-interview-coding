@@ -57,3 +57,7 @@
 .question__status--partially_correct {
   background-color: black;
 }
+
+.question__status--none {
+  background-color: #dcdcdc;
+}
