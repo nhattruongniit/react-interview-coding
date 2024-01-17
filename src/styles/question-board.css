@@ -1,5 +1,11 @@
+
+.question_board {
+  display: flex;
+  justify-content: space-between;
+}
 .column {
   margin: 0 15px 50px;
+  width: 33%;
 }
 
 .box {
