@@ -31,9 +31,7 @@ const useDebounce = (text, delay = 1000) => {
   return debounced;
 }
 
-
-
-function RaceCondtion() {
+function ElectronicStore() {
   const [dataSouce, setDataSource] = React.useState([]);
   const [textSeach, setTextSearch] = React.useState('');
   const [sortDirection, setSortDirection] = React.useState(fetchSortHeader);
@@ -183,4 +181,4 @@ function RaceCondtion() {
   )
 }
 
-export default RaceCondtion
+export default ElectronicStore

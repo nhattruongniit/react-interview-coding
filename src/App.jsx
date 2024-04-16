@@ -8,7 +8,7 @@ import Accordion from "./Accordion/Accordion";
 import QuestionBoard from "./QuestionBoard/QuestionBoard";
 import ColorBox from "./ColorBox/ColorBox";
 import DebounceUser from "./DebounceUser/DebounceUser";
-import RaceCondtion from "./RaceCondtion/RaceCondtion";
+import ElectronicStore from "./ElectronicStore/ElectronicStore";
 
 function App() {
   return (
@@ -88,10 +88,10 @@ function App() {
           </li>
           <li className="me-2">
             <NavLink
-              to="/race-condition"
+              to="/electronic-store"
               className="inline-block p-4 border-transparent text-black"
             >
-              Race Condition
+              Electronic Store
             </NavLink>
           </li>
         </ul>
@@ -107,7 +107,7 @@ function App() {
           <Route path="/accordion" element={<Accordion />} />
           <Route path="/color-box" element={<ColorBox />} />
           <Route path="/debounce-user" element={<DebounceUser />} />
-          <Route path="/race-condition" element={<RaceCondtion />} />
+          <Route path="/electronic-store" element={<ElectronicStore />} />
         </Routes>
       </div>
     </div>
