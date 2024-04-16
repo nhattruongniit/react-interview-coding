@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 
 import ContactForm from "./ContactForm/ContactForm";
 import Tabs from "./Tabs/Tabs";
@@ -8,6 +8,7 @@ import Accordion from "./Accordion/Accordion";
 import QuestionBoard from "./QuestionBoard/QuestionBoard";
 import ColorBox from "./ColorBox/ColorBox";
 import DebounceUser from "./DebounceUser/DebounceUser";
+import RaceCondtion from "./RaceCondtion/RaceCondtion";
 
 function App() {
   return (
@@ -19,71 +20,79 @@ function App() {
       <div className="text-sm font-medium text-center text-gray-500 border-gray-200 dark:text-gray-400 dark:border-gray-700">
         <ul className="flex flex-wrap -mb-px">
           <li className="me-2">
-            {/* <Link to="/" className="inline-block p-4 border-b-2 text-blue-600 border-blue-600">
+            {/* <NavLink to="/" className="inline-block p-4 border-b-2 text-blue-600 border-blue-600">
               Contact Form
-            </Link> */}
-            <Link
+            </NavLink> */}
+            <NavLink
               to="/"
               className="inline-block p-4 border-transparent text-black"
             >
               Contact Form
-            </Link>
+            </NavLink>
           </li>
           <li className="me-2">
-            <Link
+            <NavLink
               to="/tabs"
               className="inline-block p-4 border-transparent text-black"
             >
               Tabs
-            </Link>
+            </NavLink>
           </li>
           <li className="me-2">
-            <Link
+            <NavLink
               to="/traffic-light"
               className="inline-block p-4 border-transparent text-black"
             >
               Traffic Light
-            </Link>
+            </NavLink>
           </li>
           <li className="me-2">
-            <Link
+            <NavLink
               to="/job-board"
               className="inline-block p-4 border-transparent text-black"
             >
               Job Board
-            </Link>
+            </NavLink>
           </li>
           <li className="me-2">
-            <Link
+            <NavLink
               to="/question-board"
               className="inline-block p-4 border-transparent text-black"
             >
               Question Board
-            </Link>
+            </NavLink>
           </li>
           <li className="me-2">
-            <Link
+            <NavLink
               to="/accordion"
               className="inline-block p-4 border-transparent text-black"
             >
               Accordion
-            </Link>
+            </NavLink>
           </li>
           <li className="me-2">
-            <Link
+            <NavLink
               to="/color-box"
               className="inline-block p-4 border-transparent text-black"
             >
               Color Box
-            </Link>
+            </NavLink>
           </li>
           <li className="me-2">
-            <Link
+            <NavLink
               to="/debounce-user"
               className="inline-block p-4 border-transparent text-black"
             >
               Debounce User
-            </Link>
+            </NavLink>
+          </li>
+          <li className="me-2">
+            <NavLink
+              to="/race-condition"
+              className="inline-block p-4 border-transparent text-black"
+            >
+              Race Condition
+            </NavLink>
           </li>
         </ul>
       </div>
@@ -98,6 +107,7 @@ function App() {
           <Route path="/accordion" element={<Accordion />} />
           <Route path="/color-box" element={<ColorBox />} />
           <Route path="/debounce-user" element={<DebounceUser />} />
+          <Route path="/race-condition" element={<RaceCondtion />} />
         </Routes>
       </div>
     </div>
