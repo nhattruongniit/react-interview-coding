@@ -1,0 +1,24 @@
+.view_container {
+  display: flex;
+  margin-top: 12px;
+}
+
+.view {
+  padding-bottom: 12px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.view:hover {
+  color: #f00;
+}
+
+.app {
+  display: flex;
+}
+
+.race_user {
+  border-right: 1px solid #c0c0c0;
+  margin-right: 12px;
+  padding-right: 12px;
+}
