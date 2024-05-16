@@ -46,6 +46,9 @@ export default function Tabs({ defaultValue }) {
       </div>
       <br />
       <br />
+      <hr />
+      <br />
+      <h2 className="mb-2 text-lg font-semibold text-gray-900">Demo</h2>
       <div className="tabs">
         <div className="tabs-list">
           {items.map(({ label, value: itemValue }) => {

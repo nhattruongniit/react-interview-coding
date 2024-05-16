@@ -65,9 +65,26 @@ function JobBoard() {
             </li>
           </ul>
         </div>
+        <br />
+        <h4 className="mb-2 text-lg font-semibold text-gray-900">
+          API
+        </h4>
+        <div className="space-y-1 text-gray-500 list-disc list-inside">
+          <ul className="space-y-1 text-gray-500 list-disc list-inside mt-5  ml-5">
+           <li>
+              Get job stories: <a href="https://hacker-news.firebaseio.com/v0/jobstories.json" target="_blank" className="font-medium text-blue-600 underline">https://hacker-news.firebaseio.com/v0/jobstories.json</a>
+            </li>
+            <li>
+              Get job: <a href="https://hacker-news.firebaseio.com/v0/item/38667654.json" target="_blank" className="font-medium text-blue-600 underline">https://hacker-news.firebaseio.com/v0/item/38667654.json</a>
+            </li>
+          </ul>
+        </div>
       </div>
       <br />
       <br />
+      <hr />
+      <br />
+      <h2 className="mb-2 text-lg font-semibold text-gray-900">Demo</h2>
 
       <div>
         <h1 className="title">Jobs Board</h1>

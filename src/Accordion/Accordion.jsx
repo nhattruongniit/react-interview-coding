@@ -16,6 +16,9 @@ function Accordion() {
       </div>
       <br />
       <br />
+      <hr />
+      <br />
+      <h2 className="mb-2 text-lg font-semibold text-gray-900">Demo</h2>
       <div className="accordionFluent">
         <div className="accordionItemFluent">
           <input type="checkbox" className='accordion_checkbox' />

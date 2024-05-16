@@ -8,107 +8,133 @@ import Accordion from "./Accordion/Accordion";
 import QuestionBoard from "./QuestionBoard/QuestionBoard";
 import ColorBox from "./ColorBox/ColorBox";
 import ElectronicStore from "./ElectronicStore/ElectronicStore";
-import RaceCondition from "./RaceCondition/RaceCondition";
+import MultipleView from "./MultipleView/MultipleView";
+import Autocomplete from "./Autocomplete/Autocomplete";
 
 function App() {
   return (
-    <div className="container">
-      <h1 className="text-center text-3xl font-bold mb-10 mt-5">
-        React Interview Coding
-      </h1>
-
-      <div className="text-sm font-medium text-center text-gray-500 border-gray-200 dark:text-gray-400 dark:border-gray-700">
-        <ul className="flex flex-wrap -mb-px">
-          <li className="me-2">
-            {/* <NavLink to="/" className="inline-block p-4 border-b-2 text-blue-600 border-blue-600">
-              Contact Form
-            </NavLink> */}
-            <NavLink
-              to="/"
-              className="inline-block p-4 border-transparent text-black"
-            >
-              Contact Form
-            </NavLink>
-          </li>
-          <li className="me-2">
-            <NavLink
-              to="/tabs"
-              className="inline-block p-4 border-transparent text-black"
-            >
-              Tabs
-            </NavLink>
-          </li>
-          <li className="me-2">
-            <NavLink
-              to="/traffic-light"
-              className="inline-block p-4 border-transparent text-black"
-            >
-              Traffic Light
-            </NavLink>
-          </li>
-          <li className="me-2">
-            <NavLink
-              to="/job-board"
-              className="inline-block p-4 border-transparent text-black"
-            >
-              Job Board
-            </NavLink>
-          </li>
-          <li className="me-2">
-            <NavLink
-              to="/question-board"
-              className="inline-block p-4 border-transparent text-black"
-            >
-              Question Board
-            </NavLink>
-          </li>
-          <li className="me-2">
-            <NavLink
-              to="/accordion"
-              className="inline-block p-4 border-transparent text-black"
-            >
-              Accordion
-            </NavLink>
-          </li>
-          <li className="me-2">
-            <NavLink
-              to="/color-box"
-              className="inline-block p-4 border-transparent text-black"
-            >
-              Color Box
-            </NavLink>
-          </li>
-          <li className="me-2">
-            <NavLink
-              to="/electronic-store"
-              className="inline-block p-4 border-transparent text-black"
-            >
-              Electronic Store
-            </NavLink>
-          </li>
-          <li className="me-2">
-            <NavLink
-              to="/race-condition"
-              className="inline-block p-4 border-transparent text-black"
-            >
-              Race Conditional
-            </NavLink>
-          </li>
-        </ul>
-      </div>
-
-      <div className="mt-8">
-        <Routes>
-          <Route path="/" element={<ContactForm />} />
-          <Route path="/tabs" element={<Tabs />} />
-          <Route path="/traffic-light" element={<TrafficLight />} />
-          <Route path="/job-board" element={<JobBoard />} />
-          <Route path="/question-board" element={<QuestionBoard />} />
-          <Route path="/accordion" element={<Accordion />} />
-          <Route path="/color-box" element={<ColorBox />} />
-          <Route path="/electronic-store" element={<ElectronicStore />} />
-          <Route path="/race-condition" element={<RaceCondition />} />
-        </Routes>
+    <div className="bg-gray-100 font-family-karla flex">
+      <aside className="relative shrink-0 bg-[#3d68ff] h-screen w-64 hidden sm:block shadow-xl">
+        <div className="p-6 text-white text-center text-3xl font-semibold uppercase">
+          React
+        </div>
+        <nav className="text-white text-base font-semibold pt-3 pl-6 list-none">
+          <ul>
+            <li className="flex items-center">
+              <NavLink
+                to="/"
+                className="flex items-center active-nav-link text-whitenav-item pr-2"
+              >
+                Contact Form
+              </NavLink>
+              <span className="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">E</span>
+            </li>
+            <li className="flex items-center mt-6">
+              <NavLink
+                to="/tabs"
+                className="flex items-center active-nav-link text-whitenav-item pr-2"
+              >
+                Tabs
+              </NavLink>
+              <span className="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">E</span>
+            </li>
+            <li className="flex items-center mt-6">
+              <NavLink
+                to="/traffic-light"
+                className="flex items-center active-nav-link text-whitenav-item pr-2"
+              >
+                 Traffic Light
+              </NavLink>
+              <span className="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">E</span>
+            </li>
+            <li className="flex items-center mt-6">
+              <NavLink
+                to="/question-board"
+                className="flex items-center active-nav-link text-whitenav-item pr-2"
+              >
+                Question Board
+              </NavLink>
+              <span className="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">E</span>
+            </li>
+            <li className="flex items-center mt-6">
+              <NavLink
+                to="/accordion"
+                className="flex items-center active-nav-link text-whitenav-item pr-2"
+              >
+                Accordion
+              </NavLink>
+              <span className="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">E</span>
+            </li>
+            <li className="flex items-center mt-6">
+              <NavLink
+                to="/color-box"
+                className="flex items-center active-nav-link text-whitenav-item pr-2"
+              >
+                Color Box
+              </NavLink>
+              <span className="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">E</span>
+            </li>
+            <li className="flex items-center mt-6">
+              <NavLink
+                to="/job-board"
+                className="flex items-center active-nav-link text-whitenav-item pr-2"
+              >
+                Job Board
+              </NavLink>
+              <span className="bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">M</span>
+            </li>
+            <li className="flex items-center mt-6">
+              <NavLink
+                to="/autocomplete"
+                className="flex items-center active-nav-link text-whitenav-item pr-2"
+              >
+                Autocomplete
+              </NavLink>
+              <span className="bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">M</span>
+            </li>
+            <li className="flex items-center mt-6">
+              <NavLink
+                to="/electronic-store"
+                className="flex items-center active-nav-link text-whitenav-item pr-2"
+              >
+                Electronic Store
+              </NavLink>
+              <span className="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">H</span>
+            </li>
+            <li className="flex items-center mt-6">
+              <NavLink
+                to="/multiple-view"
+                className="flex items-center active-nav-link text-whitenav-item pr-2"
+              >
+                Multiple View
+              </NavLink>
+              <span className="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">H</span>
+            </li>
+          </ul>
+    
+           
+        </nav>
+      </aside>
+      <div className="w-full flex flex-col h-screen overflow-y-hidden">
+        <header className="w-full items-center bg-white py-2 px-6 hidden sm:flex h-[64px]">
+          <div className="w-1/2"></div>
+        </header>
+        <div className="w-full overflow-x-hidden border-t flex flex-col">
+          <main className="w-full flex-grow p-6">
+            <Routes>
+              <Route path="/" element={<ContactForm />} />
+              <Route path="/tabs" element={<Tabs />} />
+              <Route path="/traffic-light" element={<TrafficLight />} />
+              <Route path="/job-board" element={<JobBoard />} />
+              <Route path="/autocomplete" element={<Autocomplete />} />
+              <Route path="/question-board" element={<QuestionBoard />} />
+              <Route path="/accordion" element={<Accordion />} />
+              <Route path="/color-box" element={<ColorBox />} />
+              <Route path="/electronic-store" element={<ElectronicStore />} />
+              <Route path="/multiple-view" element={<MultipleView />} />
+            </Routes>
+          </main>
+        </div>
       </div>
     </div>
   );

@@ -42,6 +42,9 @@ function ColorBox() {
       </div>
       <br />
       <br />
+      <hr />
+      <br />
+      <h2 className="mb-2 text-lg font-semibold text-gray-900">Demo</h2>
 
       <div className="mb-2">
         Current color: {currentColor || 'Default'}

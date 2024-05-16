@@ -1,4 +1,5 @@
 import React from 'react';
+import { useDebounce } from '../hooks/useDebounce';
 
 const DIRECTION = {
   DEFAULT: 'DEFAULT',
@@ -15,21 +16,6 @@ function fetchSortHeader() {
   }, {})
 }
 
-const useDebounce = (text, delay = 1000) => {
-  const [debounced, setDebounced] = React.useState(text);
-
-  React.useEffect(() => {
-    const timer = setTimeout(() => {
-      setDebounced(text);
-    }, delay)
-
-    return () => {
-      clearTimeout(timer);
-    }
-  }, [text])
-
-  return debounced;
-}
 
 function ElectronicStore() {
   const [dataSouce, setDataSource] = React.useState([]);
@@ -37,7 +23,7 @@ function ElectronicStore() {
   const [sortDirection, setSortDirection] = React.useState(fetchSortHeader);
   const [product, setProduct] = React.useState(null);
   const [productId, setProductId] = React.useState(null);
-  const debounced = useDebounce(textSeach)
+  const debounced = useDebounce(textSeach, 500)
 
   // initialize products
   React.useEffect(() => {
@@ -111,18 +97,36 @@ function ElectronicStore() {
   return (
     <div>
       <h2 className="mb-2 text-lg font-semibold text-gray-900">Requirements</h2>
-      <div>
+      <div className='text-gray-500'>
         Implement a feature where clicking on a <b>Title</b> from the list immediately triggers a fetch 
         request for their details. However, if another Title is clicked before the previous request is abort, 
-        ensure that only the details for the most recently clicked title are displayed.
+        ensure that only the details for the most recently clicked title are displayed. 
       </div>
-      <ul className='pl-10 list-disc mt-4'>
-        <li>Show list</li>
+      <ul className='pl-10 text-gray-500 list-disc mt-4'>
         <li>Sort by column</li>
-        <li>Search by name</li>
-        <li>Just show the most recntly product</li>
+        <li>Search by title</li>
+        <li>Just show the most recently product</li>
       </ul>
-
+      <br />
+      <div ><b>Notes:</b> <span className='text-gray-500'>please doesn't use 3rd library.</span></div>
+      <br />
+      <h4 className="mb-2 text-lg font-semibold text-gray-900">
+        API
+      </h4>
+      <div className="space-y-1 text-gray-500 list-disc list-inside">
+        <ul className="space-y-1 text-gray-500 list-disc list-inside mt-5  ml-5">
+          <li>
+            Get products list: <a href="https://dummyjson.com/products?limit=5" target="_blank" className="font-medium text-blue-600 underline">https://dummyjson.com/products?limit=5</a>
+          </li>
+          <li>
+            Get job detail: <a href="https://dummyjson.com/product/2" target="_blank" className="font-medium text-blue-600 underline">https://dummyjson.com/product/2</a>
+          </li>
+        </ul>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <h2 className="mb-2 text-lg font-semibold text-gray-900">Demo</h2>
       <div className='mt-4 flex justify-end items-center'>
         <label className='mr-2'>Search:</label>
         <input type="text" id="small-input" onChange={handleSearch} className="block p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500"/>
@@ -166,11 +170,40 @@ function ElectronicStore() {
         </table>
       </div>
 
-      <div className='mt-4'>
-        <h3 className='font-bold'>Show detail</h3>
-        Title: {product?.title || 'N/A'} <br />
-        Brand: {product?.brand || 'N/A'} 
-      </div>
+      <br />
+      <h3 className='font-bold'>Product detail</h3>
+      <br />
+      <table className="w-full text-sm text-left rtl:text-right text-gray-500">
+        <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+          <tr>
+            <th scope="col" className="px-6 py-3">
+              ID
+            </th>
+            <th scope="col" className="px-6 py-3">
+              Title
+            </th>
+            <th scope="col" className="px-6 py-3">
+              Brand
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="bg-white border-b">
+            <th 
+              scope="row" 
+              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-[#0060FD]" 
+            >
+              {product?.id || 'N/A'}
+            </th>
+            <td className="px-6 py-4">
+              {product?.title || 'N/A'}
+            </td>
+            <td className="px-6 py-4">
+              {product?.brand || 'N/A'} 
+            </td>
+          </tr>
+        </tbody>
+      </table>
       <br />
       <br />
       <br />

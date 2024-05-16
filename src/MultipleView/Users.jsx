@@ -10,7 +10,7 @@ export default function Users({ dataSource = [], currentUser, gotoUser }) {
           key={data.id}
           onClick={() => gotoUser(data)}
         >
-          {data.name}
+          {data.title}
         </div>
       ))}
     </div>

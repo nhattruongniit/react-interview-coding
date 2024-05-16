@@ -28,11 +28,13 @@ function QuestionBoard() {
           categories.
           <ul className="space-y-1 text-gray-500 list-disc list-inside mt-5  ml-5">
             <li>
-              Show questions by categories. Get data from dataQuestions.js
+              Show questions by categories. Get data questions from {''}
+              <a href="https://stackblitz.com/edit/stackblitz-starters-mxnmpt?file=src%2FdataQuestions.js" target="_blank" className="font-medium text-blue-600 underline">here</a>.
             </li>
             <li>
               Show submissions question status: correct, incorrect, partially
-              correct. Get data from dataSubmissions.js
+              correct. Get data submissons from from <a href="https://stackblitz.com/edit/stackblitz-starters-mxnmpt?file=src%2FdataSubmissions.js" target="_blank" className="font-medium text-blue-600 underline">here</a>.
+            
               <ul className="text-gray-500 list- list-inside ml-10">
                 <li>
                   None answer: <span className="text-gray-500">gray</span>
@@ -54,6 +56,9 @@ function QuestionBoard() {
       </div>
       <br />
       <br />
+      <hr />
+      <br />
+      <h2 className="mb-2 text-lg font-semibold text-gray-900">Demo</h2>
 
       <div className="question_board">
         <div className="column">

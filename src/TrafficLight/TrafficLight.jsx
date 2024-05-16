@@ -56,7 +56,9 @@ function TrafficLight() {
 
       <br />
       <br />
+      <hr />
       <br />
+      <h2 className="mb-2 text-lg font-semibold text-gray-900">Demo</h2>
 
       <div className='traffic_container'>
         <div
@@ -86,8 +88,8 @@ function TrafficLight() {
             className="traffic-light"
             style={{ backgroundColor: 'red' }}
           />
-          <div aria-hidden="true" class="traffic-light"></div>
-          <div aria-hidden="true" class="traffic-light"></div>
+          <div aria-hidden="true" className="traffic-light"></div>
+          <div aria-hidden="true" className="traffic-light"></div>
         </div>
       </div> */}
     </>
