@@ -4,7 +4,9 @@ function Accordion() {
   return (
     <>
       <div>
-        <h2 className="mb-2 text-lg font-semibold text-gray-900">Requirements</h2>
+        <h2 className="mb-2 text-lg font-semibold text-gray-900 flex items-center">
+          Requirements <span className="bg-green-100 text-greeen-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded ml-2">Easy</span>
+        </h2>
         <div className="space-y-1 text-gray-500 list-disc list-inside">
           Build an accordion component that a display a list of vertical stacked selections witch each container a title and content snipper.
           <ul className="space-y-1 text-gray-500 list-disc list-inside mt-5 ml-5">

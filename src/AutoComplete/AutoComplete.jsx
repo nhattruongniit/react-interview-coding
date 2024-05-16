@@ -33,7 +33,9 @@ export default function Autocomplete() {
 
   return (
     <div className="wrapper">
-      <h2 className="mb-2 text-lg font-semibold text-gray-900">Requirements</h2>
+      <h2 className="mb-2 text-lg font-semibold text-gray-900 flex items-center">
+        Requirements <span className="bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded ml-2">Medium</span>
+      </h2>
       <div className='text-gray-500'>
         Create a small Autocomplete.
         <div className='mt-4'>

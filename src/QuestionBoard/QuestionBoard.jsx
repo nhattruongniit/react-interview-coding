@@ -20,8 +20,8 @@ function QuestionBoard() {
   return (
     <div>
       <div>
-        <h2 className="mb-2 text-lg font-semibold text-gray-900">
-          Requirements
+        <h2 className="mb-2 text-lg font-semibold text-gray-900 flex items-center">
+          Requirements <span className="bg-green-100 text-greeen-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded ml-2">Easy</span>
         </h2>
         <div className="space-y-1 text-gray-500 list-disc list-inside">
           Build a question board that displays the list question that group by

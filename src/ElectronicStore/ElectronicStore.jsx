@@ -96,14 +96,16 @@ function ElectronicStore() {
 
   return (
     <div>
-      <h2 className="mb-2 text-lg font-semibold text-gray-900">Requirements</h2>
+      <h2 className="mb-2 text-lg font-semibold text-gray-900 flex items-center">
+        Requirements <span className="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded ml-2">Hard</span>
+      </h2>
       <div className='text-gray-500'>
         Implement a feature where clicking on a <b>Title</b> from the list immediately triggers a fetch 
         request for their details. However, if another Title is clicked before the previous request is abort, 
         ensure that only the details for the most recently clicked title are displayed. 
       </div>
       <ul className='pl-10 text-gray-500 list-disc mt-4'>
-        <li>Sort by column</li>
+        <li>Sort by column (ASC, DESC)</li>
         <li>Search by title</li>
         <li>Just show the most recently product</li>
       </ul>
