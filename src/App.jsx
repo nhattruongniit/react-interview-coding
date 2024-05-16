@@ -9,7 +9,7 @@ import QuestionBoard from "./QuestionBoard/QuestionBoard";
 import ColorBox from "./ColorBox/ColorBox";
 import ElectronicStore from "./ElectronicStore/ElectronicStore";
 import MultipleView from "./MultipleView/MultipleView";
-import Autocomplete from "./Autocomplete/Autocomplete";
+import Autocomplete from "./AutoComplete/AutoComplete";
 
 function App() {
   return (
