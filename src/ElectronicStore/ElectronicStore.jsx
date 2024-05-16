@@ -110,7 +110,7 @@ function ElectronicStore() {
         <li>Just show the most recently product</li>
       </ul>
       <br />
-      <div ><b>Notes:</b> <span className='text-gray-500'>please doesn't use 3rd library.</span></div>
+      <div ><b>Notes:</b> <span className='text-gray-500'>Don't use 3rd library.</span></div>
       <br />
       <h4 className="mb-2 text-lg font-semibold text-gray-900">
         API
