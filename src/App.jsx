@@ -10,6 +10,7 @@ import ColorBox from "./ColorBox/ColorBox";
 import ElectronicStore from "./ElectronicStore/ElectronicStore";
 import MultipleView from "./MultipleView/MultipleView";
 import Autocomplete from "./AutoComplete/AutoComplete";
+import DetectionTab from "./DetectionTab/DetectionTab";
 
 function App() {
   return (
@@ -94,6 +95,15 @@ function App() {
             </li>
             <li className="flex items-center mt-6">
               <NavLink
+                to="/detection-tab"
+                className="flex items-center active-nav-link text-whitenav-item pr-2"
+              >
+                DetectionTab
+              </NavLink>
+              <span className="bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">M</span>
+            </li>
+            <li className="flex items-center mt-6">
+              <NavLink
                 to="/electronic-store"
                 className="flex items-center active-nav-link text-whitenav-item pr-2"
               >
@@ -132,6 +142,7 @@ function App() {
               <Route path="/color-box" element={<ColorBox />} />
               <Route path="/electronic-store" element={<ElectronicStore />} />
               <Route path="/multiple-view" element={<MultipleView />} />
+              <Route path="/detection-tab" element={<DetectionTab />} />
             </Routes>
           </main>
         </div>
