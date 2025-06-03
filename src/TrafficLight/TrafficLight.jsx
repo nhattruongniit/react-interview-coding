@@ -44,13 +44,13 @@ function TrafficLight() {
           predetermined intervals and loop indefinitely. Each light should be lit for the following durations:
           <ul className="space-y-1 text-gray-500 list-disc list-inside mt-5  ml-5">
             <li>
-              Red light: 4000ms
+              Red light: appear after 3000ms (yellow → 3s → red)
             </li>
             <li>
-              Yellow light: 500ms
+              Yellow light: appear after 4000ms (green → 4s → yellow)
             </li>
             <li>
-              Green light: 3000ms
+              Green light: appear after 5000ms (yellow → 5s → green)
             </li>
           </ul>
         </div>
