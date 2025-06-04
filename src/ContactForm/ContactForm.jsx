@@ -1,8 +1,8 @@
-import React from 'react'
-
 function ContactForm() {
   return (
     <>
+      <input className="standard-input" disabled value="http://localhost:5173/en-th/promotion?promoId=55&amp;promoType=%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B9%84%E0%B8%8A%E0%B9%89%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88&amp;lang=EN_TH" />
+          
       <div>
         <h2 className="mb-2 text-lg font-semibold text-gray-900 flex items-center">
           Requirements <span className="bg-green-100 text-greeen-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded ml-2">Easy</span>
@@ -38,17 +38,17 @@ function ContactForm() {
       <form>
         <div className="mb-6">
           <div>
-            <label for="name" className="block mb-2 text-sm font-medium text-red-700 dark:text-red-500">Name</label>
+            <label htmlFor="name" className="block mb-2 text-sm font-medium text-red-700 dark:text-red-500">Name</label>
             <input type="text" id="name" className="bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 block w-full p-2.5" />
             <p className="mt-2 text-sm text-red-600 dark:text-red-500">Please enter name.</p>
           </div>
         </div>
         <div className="mb-6">
-          <label for="email" className="block mb-2 text-sm font-medium text-gray-900 ">Email address</label>
+          <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 ">Email address</label>
           <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " placeholder="john.doe@company.com" />
         </div> 
         <div className="mb-6">
-          <label for="countries" className="block mb-2 text-sm font-medium text-gray-900">Country</label>
+          <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900">Country</label>
           <select id="countries" className="bg-gray-50 border border-gray-300 w-full p-2.5 text-gray-900 text-sm rounded-lg">
             <option selected>Choose a country</option>
             <option value="US">United States</option>
@@ -59,11 +59,11 @@ function ContactForm() {
         </div>
         
         <div className="mb-6">
-          <label for="password" className="block mb-2 text-sm font-medium text-gray-900 ">Password</label>
+          <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 ">Password</label>
           <input type="password" id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " placeholder="•••••••••" />
         </div> 
         <div className="mb-6">
-          <label for="confirm_password" className="block mb-2 text-sm font-medium text-gray-900 ">Confirm password</label>
+          <label htmlFor="confirm_password" className="block mb-2 text-sm font-medium text-gray-900 ">Confirm password</label>
           <input type="password" id="confirm_password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " placeholder="•••••••••" />
         </div> 
         <div className='flex justify-end'>
@@ -91,7 +91,7 @@ function ContactForm() {
             <tbody>
               <tr className="bg-white border-b  ">
                 <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    Apple MacBook Pro 17"
+                    Apple MacBook Pro 17
                 </th>
                 <td className="px-6 py-4">
                   macbook@gmail.com
