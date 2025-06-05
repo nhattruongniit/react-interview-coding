@@ -8,6 +8,70 @@ a.active {
   text-decoration: underline;
 }
 
+
+
+
+
+
+
+
+
+.standard-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .7215686275);
+  z-index: 9999;
+  overflow-y: auto;
+}
+
+.referral-share-modal-container {
+  width: 90%;
+  min-width: 90%;
+  max-width: 90%;
+}
+
+.standard-popup-modal-container {
+  border-radius: 0.04rem;
+  margin: 2.5rem auto;
+  font-size: 0.28rem;
+  overflow: auto;
+  color: rgba(255, 255, 255, .9019607843);
+  background: rgba(0, 0, 0, 0);
+  transform: translate(0, 0);
+  padding: unset;
+  word-wrap: break-word;
+}
+
+.standard-popup-modal-container .standard-popup-modal-body {
+  font-size: 0.28rem;
+  font-weight: normal;
+  border-bottom-right-radius: .1rem;
+  border-bottom-left-radius: .1rem;
+  background: #1a1a1a;
+}
+
+.referral-share-modal-container .referral-share-modal-body {
+  padding: 0.3rem;
+
+}
+
+html {
+  font-size: 3rem;
+}
+
+.referral-share-modal-container .referral-share-modal-body .share-url-copy-container {
+  margin: .3rem 0 0 0;
+  position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
 .standard-input {
   padding: .3rem .6rem .3rem .15rem;
   text-overflow: ellipsis;
@@ -21,4 +85,6 @@ a.active {
   height: 20px;
   background: rgba(153, 153, 153, .6);
   color: #fff;
+  padding: .3rem .6rem .3rem .15rem;
+  text-overflow: ellipsis;
 }

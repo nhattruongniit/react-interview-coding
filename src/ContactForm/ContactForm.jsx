@@ -1,8 +1,31 @@
 function ContactForm() {
   return (
     <>
-      <input className="standard-input" disabled value="http://localhost:5173/en-th/promotion?promoId=55&amp;promoType=%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B9%84%E0%B8%8A%E0%B9%89%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88&amp;lang=EN_TH" />
-          
+      <div
+        className="ReactModal__Overlay ReactModal__Overlay--after-open standard-popup-overlay referral-share-modal-overlay share-modal"
+      >
+        <div
+          className="ReactModal__Content ReactModal__Content--after-open standard-popup-modal-container referral-share-modal-container"
+          tabIndex={-1}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div
+            className="standard-popup-modal-body referral-share-modal-body"
+          >
+            <div
+              className="standard-form-field-wrapper share-url-copy-container"
+            >
+              <input
+                className="share-url-input standard-input"
+                disabled=""
+                defaultValue="http://localhost:5173/en-th/promotion?promoId=55&promoType=%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B9%84%E0%B8%8A%E0%B9%89%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88&lang=EN_TH"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div>
         <h2 className="mb-2 text-lg font-semibold text-gray-900 flex items-center">
           Requirements <span className="bg-green-100 text-greeen-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded ml-2">Easy</span>
