@@ -1,7 +1,7 @@
 function ContactForm() {
   return (
     <>
-      <div
+      {/* <div
         className="ReactModal__Overlay ReactModal__Overlay--after-open standard-popup-overlay referral-share-modal-overlay share-modal"
       >
         <div
@@ -24,7 +24,7 @@ function ContactForm() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div>
         <h2 className="mb-2 text-lg font-semibold text-gray-900 flex items-center">
